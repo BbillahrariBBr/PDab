@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Pother Dabi</string>
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+    <string name="imgdesctoilet">Toilet</string>
+    <string name="imgdescpetrolpump">Petrol Pump</string>
+    <string name="imgdescpharmacy">Pharmacy</string>
+    <string name="imgdescblood_bank">Blood Bank</string>
+    <string name="imagedescpostoffice">Post Office</string>
+    <string name="imagedesccourierservice">Courier Service</string>
+    <string name="imagedescgovtoffice">Govt Office</string>
+    <string name="imagedesctransport">Transport</string>
+    <string name="imagedescemergencycall">Emergency Call</string>
+    <string name="imagedescentertainment">Entertainment</string>
+    <string name="imagedescfestival">Festival</string>
+    <string name="imagedesceducation">Education</string>
+    <string name="imagedesctitle_ramadan">title Ramadan</string>
+    <string name="menuhome">Home</string>
+    <string name="menuhistory">History</string>
+    <string name="menucontribution">Contribution</string>
+    <string name="menuabout_us">About Us</string>
+</resources>
