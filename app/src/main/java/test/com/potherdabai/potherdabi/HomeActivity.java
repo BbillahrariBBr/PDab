@@ -10,8 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.rom4ek.arcnavigationview.ArcNavigationView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -19,7 +23,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+    ArcNavigationView arcNavigationView;
     Intent intent;
+    ImageView toilet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +34,33 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setUpUIMain();
         setSupportActionBar(toolbar);
 
+
+
         toggle = new ActionBarDrawerToggle(HomeActivity.this,drawerLayout,
                 toolbar,R.string.open_drawer,R.string.close_drawer);
-        navigationView.setNavigationItemSelectedListener(HomeActivity.this);
+        //navigationView.setNavigationItemSelectedListener(HomeActivity.this);
+        arcNavigationView.setNavigationItemSelectedListener(HomeActivity.this);
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
     }
 
-    private void setUpUIMain() {
+    public void setUpUIMain() {
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView)findViewById(R.id.navigation_view);
-
+        //navigationView = (NavigationView)findViewById(R.id.navigation_view);
+        arcNavigationView =(ArcNavigationView)findViewById(R.id.nav_view);
+        toilet = (ImageView)findViewById(R.id.img_toilet);
     }
+
+    public void goMapActivity(View v){
+        if(v.getId()== R.id.img_toilet){
+            intent = new Intent(HomeActivity.this,MapsActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
 
     @Override
     public void onBackPressed() {
