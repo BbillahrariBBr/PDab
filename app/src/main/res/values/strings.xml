@@ -21,4 +21,6 @@
     <string name="menuabout_us">About Us</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps2">Map</string>
+    <string name="place_image">place_image</string>
+    <string name="title_activity_view_direction">Map</string>
 </resources>
